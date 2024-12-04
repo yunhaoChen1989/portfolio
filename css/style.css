@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'googleFont';
+    src: url('../font/Lobster-Regular.ttf') format('truetype'),
+        url('../font/SingleDay-Regular.ttf') format('truetype'),
+        url('../font/CuteFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../font/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SingleDay';
+    src: url('../font/SingleDay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CuteFont';
+    src: url('../font/CuteFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*
+yunhao chen
+0847446
+Section D
+Mar 20 2024
+
+Color Guide:
+rgb(14, 13, 13); - black
+rgb(250, 246, 246); - white
+
+
+
+=================
+Table of Contents
+=================
+1, header styles
+2, body styles
+3, footer styles
+*/
+
+/************************
+header styles
+*************************/
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    opacity: 0.8;
+    font-family: 'googleFont';
+    z-index: 999;
+}
+header > * {
+    float: left;
+}
+header figure > *{
+    float: left;
+}
+header img{
+    margin-top: 5px;
+    width: 45px;
+    height: 45px;
+    transition: 1s;
+}
+header img#logoIcon:hover{
+    transform: scale(2) rotate(0deg);;
+}
+header nav{
+    right: 0;
+    width: 80%;
+}
+header nav ul{
+    height: 100%;
+}
+
+header nav ul li{
+    float: left;
+    width: 25%;
+    height: 3.5em;
+    text-align: left;
+    line-height: 2.5em;
+    font-size: 1.2em;
+}
+
+header nav ul li a{
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+header nav ul li:hover > a {
+    color: #4b77ca;
+    /* background-color: #aaa; */
+    border-bottom: 1px solid #4b77ca;
+}
+header nav ul li a{
+    padding: .2em 1em;
+    text-decoration: none;
+    display: block;
+    border-right: solid;
+    border-color: transparent;
+    background-clip: padding-box;
+}
+img#navicon{
+    display: none;
+}
+/************************
+body styles
+*************************/
+main section#introduction{
+    color:#fff;
+    font-family: 'Oswald';
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 5em;
+    font-size: xx-large;
+    height: 15em;
+    background-image: linear-gradient(to bottom, rgb(225,225,225) , rgb(30,30,30));
+    text-shadow: 1px 1px 2px white;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+main section#introduction h1{
+    font-size: 5em;
+    color:  rgb(72, 245, 101); 
+}
+
+main{
+    margin-top: 80px; /* Add a top margin to avoid content overlay */
+    clear: both;
+    
+}
+body{
+    max-width: 1200px;
+    min-width: 300px;
+    /* margin: 0 auto; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+
+main section#pictures ul li{
+    float: left;
+    width: 48%;
+    /* height: 500px; */
+    margin: 10px;
+    position: relative;
+    
+}
+main section#pictures ul li span{
+    position: absolute;
+    top: 80%;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0,0.5));
+    /* background-color: rgb(0, 0, 0, 0.5); */
+    border-radius: 10px;
+    color:#fff;
+    font-family: 'SingleDay';
+    font-size: 1.1em;
+    transition: 1s;
+    z-index: 2;
+
+}
+main section#pictures ul li span:hover{
+    transform: translate(0px,-40px) scaleY(1.5);
+}
+
+main section#pictures ul li:hover img {
+    filter: none;
+}
+
+main section#pictures ul li img:hover + span{
+    transform: translate(0px,-40px) scaleY(1.5);
+}
+
+main section#pictures ul li img{
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(102, 101, 101);
+    box-shadow: 0px 0px 10px rgb(15, 15, 15);
+    filter: blur(5px);
+    transition-delay: 0.3s;
+    z-index: 0;
+    height: 800px;
+}
+
+main section#pictures ul li:nth-of-type(3) img{
+    float: left;
+    width: 48%;
+    margin-top: 40%;
+}
+
+main section#pictures ul li:nth-of-type(3) img:nth-of-type(1){
+    transform: rotate(-10deg);
+
+}
+main section#pictures ul li:nth-of-type(3) img:nth-of-type(1):hover{
+    transform: rotate(0deg) scale(1.2);
+    z-index: 1;
+}
+
+main section#pictures ul li:nth-of-type(3) img:nth-of-type(2):hover{
+    transform: rotate(0deg);
+    z-index: 1;
+}
+main section#pictures ul li:nth-of-type(3) img:nth-of-type(2){
+    transform: rotate(10deg);
+}
+@media screen and (max-width: 1000px){
+    main section#pictures ul li{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 715px){
+    main section#introduction h1{
+        font-size: 3em;
+    }
+    header nav ul li{
+        width: 50%;
+    }
+    main{
+        margin-top: 150px;
+    }
+   
+    main section#pictures ul li{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 512px){
+    main section#introduction{
+        font-size: 2em;
+        line-height: 2em;
+        height: 8em;
+    }
+    main section#introduction h1{
+        font-size: 2em;
+    }
+    header nav ul li{
+        width: 100%;
+    }
+    /* main{
+        margin-top: 280px;
+    } */
+    main{
+        flex-wrap: wrap;
+    }
+    main > * {
+        width: 100%;
+    }
+    img#navicon{
+        display: block;
+    }
+    img#logoIcon{
+        display: none;
+    }
+    header nav ul{
+        display: none;
+    }
+    
+    header nav ul:hover{
+        display: block;
+    }
+    img#navicon:hover ~ nav ul{
+        display: block;
+    }
+
+    main section#pictures ul li{
+        width: 100%;
+        
+    }
+
+}
+
+/************************
+footer styles
+*************************/
+footer{
+    clear: both;
+    background-color: rgb(0, 0, 0);
+    color: rgb(250, 246, 246);;
+    text-align: center;
+    padding:10px;
+    font-family: 'SingleDay';
+}
+
+footer ul li{
+    float: left;
+}
+footer ul li img{
+    max-width: 25px;
+    max-height: 25px;
+    margin: 5px;
+    transition: 1s;
+}
+footer ul li img:hover{
+    transform: translate(0px, -10px) rotate(0deg);;
+}
+
+footer div:nth-child(1){
+    font-family: 'Oswald';
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 1px 3px white;
+    font-size: larger;
+    line-height: 2em;
+}
+footer p{
+    content: "";
+    clear: both;
+}
+footer ul li:nth-of-type(2) img{
+   background-color: #fff;
+}
