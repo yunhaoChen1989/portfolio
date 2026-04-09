@@ -35,9 +35,18 @@ Apr 7 2024 -->
                     <div>
                         <h1>Multi-Tool AI Chatbot</h1>
                         <span class="desc">
-                            Built and deployed a full-stack multi-tool AI chatbot using Python, LangChain, and Ollama (Llama 3.2), with a GitHub Pages frontend and VPS-hosted backend API.
-                            The chatbot supports real-time weather queries and movie discovery, routing requests to different data sources including weather APIs, 
-                            Aiyifan for Chinese movie titles, and GoMovie for English movie titles.
+                            Designed and deployed a full-stack AI chatbot that supports both weather assistance and movie search through natural language.
+
+The chatbot can answer weather questions such as “What’s the weather in Toronto this weekend?” and also handle movie requests such as “Find the Chinese movie 流浪地球” or “Search for Interstellar.” It uses LangChain to classify user intent, extract structured information such as city, date ranges, and movie titles, and route requests to the correct external source.
+
+For weather features, the chatbot uses real-time and historical weather APIs and includes a custom Time-Check node that injects the current system date into the workflow to improve handling of relative dates like today, tomorrow, this weekend, and next 3 days.
+
+For movie features, the chatbot supports bilingual content routing:
+
+Chinese movie titles are searched using Aiyifan
+English movie titles are searched using GoMovie
+
+The frontend is hosted on GitHub Pages, while the backend API is deployed on a Linux VPS, making the project fully accessible online. This project demonstrates practical skills in LLM workflow design, multi-API orchestration, prompt engineering, backend development, bilingual content handling, and production deployment.
                         </span>
                     </div>
                 </div>
